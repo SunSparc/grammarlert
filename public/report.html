@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Grammarlert Report</title>
+		<script src="/resources/js/jquery.min.js"></script>
+		<script src="/resources/js/tipsy.min.js"></script>
+		<script src="/resources/js/markup.min.js"></script>
+		<script src="/resources/js/script.js"></script>
+		<script src="/resources/js/report.js"></script>
+		<link rel="stylesheet" href="/resources/css/unsemantic.css">
+		<link rel="stylesheet" href="/resources/css/tipsy.css">
+		<link rel="stylesheet" href="/resources/css/style.css">
+	</head>
+	<body>
+		<header>
+			<div class="grid-container">
+				<div class="grid-100">
+					<form id="header-search" class="host-search">
+						<input type="text" id="search" name="host" placeholder="Type a domain name" required>
+						<input type="submit" value="Get Reports">
+						<div class="autocomplete"></div>
+					</form>
+					<h1>
+						<a href="/">Grammarlert<i>!</i></a>
+					</h1>
+				</div>
+			</div>
+		</header>
+
+		<!-- Loading -->
+		<div class="grid-container loading">
+			<div class="grid-100">
+				<h2 class="host"></h2>
+				<p class="text-center">Loading...</p>
+			</div>
+		</div>
+
+
+		<!-- Host not found -->
+		<div class="grid-container host-not-found">
+			<div class="grid-100">
+				<h2 class="host"></h2>
+
+				<p class="text-center">We don't have any reports of content problems for this site.</p>
+			</div>
+		</div>
+
+
+		<!-- Host found -->
+		<div class="grid-container host-found">
+			<div class="prefix-15 grid-70 suffix-15">
+				<h2 class="host"></h2>
+
+				<p class="text-center">We have <span class="report-count"></span> for this site.</p>
+
+				<div id="reports"></div>
+			</div>
+		</div>
+
+
+		<footer>
+			&copy; 2014 Grammarlert. All rights reserved.
+		</footer>
+
+
+
+<script id="tpl-reports" type="text/template">
+{{.}}
+	<div class="page">
+		<div class="page-head">
+			<a href="{{link}}" target="_blank" title="Open page in new tab">{{uri}}</a>
+		</div>
+		<table>
+			<tbody>
+			{{reports}}
+				<tr class="next-sugg report-{{_id}} {{status|flagsToClass}}" data-id="{{_id}}">
+					<td>
+						<b>Reported text:</b>
+					</td>
+					<td class="no-pad">
+						<div class="faux-td">
+							<code{{if originalText|hasnewline}} class="block"{{/if}}>{{originalText}}</code>
+						</div>
+					</td>
+					<td class="no-pad" style="width: 50px;">
+						<ul class="controls">
+							<li class="ack" title="Acknowledged">Ack</li>
+							<li class="fixed" title="Fixed">Fixed</li>
+							<!-- <li class="reject" title="Reject">Reject</li> -->
+							<li class="delete" title="Delete">Delete</li>
+						</ul>
+					</td>
+				</tr>
+				<tr class="report-{{_id}}">
+					<td>
+						<b>Suggestions:</b>
+					</td>
+					<td class="no-pad" colspan="2">
+					{{suggestions}}
+						<div class="faux-td">
+							<code{{if Suggestion|hasnewline}} class="block"{{/if}}>{{Suggestion}}</code>
+							{{if Note|notempty}}<small><br>{{Note}}</small>{{/if}}
+						</div>
+					{{/suggestions}}
+					</td>
+				</tr>
+			{{/reports}}
+			</tbody>
+		</table>
+	</div>
+{{/.}}
+</script>
+
+
+
+	</body>
+</html>

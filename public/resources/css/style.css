@@ -1,0 +1,387 @@
+/* Eric Meyer's Reset CSS v2.0 */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+body {
+	font: 18px/1.5em 'Raleway';
+	color: #555;
+}
+
+b {
+	font-weight: bold;
+}
+
+i {
+	font-style: italic;
+}
+
+header {
+	padding: 1em 0;
+	background: #FC941E;
+	color: #FFF;
+	margin-bottom: 3em;
+}
+
+.home header {
+	padding: 3em 0;
+}
+
+.home h1 {
+	font-size: 80px;
+	text-align: center;
+}
+
+h1 {
+	font-size: 35px;
+	line-height: 1.5em;
+}
+
+h1 a {
+	color: #FFF;
+	text-decoration: none;
+}
+
+h1 a:hover {
+	color: black;
+}
+
+h1 i {
+	font-family: 'Times New Roman', serif;
+	font-size: 45px;
+}
+
+.home h1 i {
+	font-size: 95px;
+}
+
+h2 {
+	font-weight: bold;
+	font-size: 40px;
+	text-align: center;
+	line-height: 1.25em;
+	color: #000;
+}
+
+h3 {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: .5em;
+	color: #333;
+}
+
+p {
+	padding: .5em 0;
+}
+
+#header-search {
+	float: right;
+	margin-top: .5em;
+}
+
+input[type=text] {
+	padding: 0 0 5px 0;
+	font-family: 'Arvo', 'Monaco', 'Menlo', sans-serif;
+	border: none;
+	border-bottom: 2px solid #F9B56B;
+	outline: none;
+}
+
+input[type=text]:focus {
+	border-bottom-color: #FC941E;
+}
+
+.main-search #search {
+	font-size: 24px;
+	line-height: 1em;
+	max-width: 400px;
+	width: 100%;
+}
+
+.main-search {
+	margin: 4em 0 7em;
+	position: relative;
+	text-align: center;
+}
+
+input[type=submit] {
+	border: none;
+	background: #FC941E;
+	color: #FFF;
+	font: inherit;
+	outline: none;
+	cursor: pointer;
+	padding: 8px 15px;
+}
+
+.main-search input[type=submit]:hover {
+	background: #D86F00;
+}
+
+.autocomplete {
+	display: none;
+	position: absolute;
+	border: 1px solid #AAA;
+	box-shadow: 1px 1px 1px #AAA;
+	text-align: left;
+	background: #FFF;
+}
+
+.autocpl-suggestion {
+	cursor: pointer;
+	font-family: 'Arvo', 'Monaco', 'Menlo', monospace;
+	font-size: 16px;
+	color: #999;
+	padding: 2px 10px;
+}
+
+.autocpl-suggestion.sel {
+	background: #FFE2B7;
+}
+
+.autocpl-suggestion .matched {
+	color: #000;
+}
+
+.autocpl-nosugg {
+	color: #CCC;
+	cursor: default;
+	font-size: 12px;
+	padding: 2px 5px;
+	font-style: italic;
+}
+
+
+#header-search input[type=text],
+#header-search input[type=text]:focus {
+	border-bottom-color: #FFF;
+	background: none;
+	font-size: 18px;
+	color: #FFF;
+	width: 300px;
+}
+
+#header-search input[type=submit] {
+	background: #FFF;
+	font-size: 16px;
+	padding: .25em .5em;
+	color: #FC941E;
+}
+
+#header-search input[type=submit]:hover {
+	color: #FFF;
+	background: #D86F00;
+}
+
+#header-search ::-webkit-input-placeholder {
+   color: rgba(255, 255, 255, .6);
+}
+
+#header-search :-moz-placeholder {
+   color: rgba(255, 255, 255, .6);
+}
+
+#header-search ::-moz-placeholder {
+   color: rgba(255, 255, 255, .6);
+}
+
+#header-search :-ms-input-placeholder {  
+   color: rgba(255, 255, 255, .6);
+}
+
+
+
+.host-found,
+.host-not-found {
+	display: none;
+}
+
+.report-count {
+	font-weight: bold;
+}
+
+.page {
+	margin: 2em 0;
+	border: 1px solid #444;
+}
+
+.page-head {
+	background: #444;
+	color: #DDD;
+	padding: .5em 1em;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.page-head a {
+	color: inherit;
+	display: block;
+	text-decoration: none;
+}
+
+.page-head a:hover {
+	color: #FFE2B7;
+}
+
+.page table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.page table td {
+	padding: 1em 1.25em;
+	border: 1px solid #CCC;
+	font-size: 14px;
+	line-height: 1.4em;
+	vertical-align: top;
+}
+
+.page table td:first-child {
+	border-left: 0;
+	width: 100px;
+}
+
+.page table td:last-child {
+	border-right: 0;
+}
+
+.page table tr:first-child td {
+	border-top: 0;
+}
+
+.page table tr:last-child td {
+	border-bottom: 0;
+}
+
+.page table .next-sugg td {
+	border-top: 5px solid #444;
+}
+
+.page table tr:first-child .next-sugg td {
+	border-top: none;
+}
+
+small {
+	font-size: 12px;
+	line-height: 1.25em;
+	color: #999;
+}
+
+code {
+	background: #F9EED6;
+	padding: 4px 2px;
+	display: inline-block;
+	font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+	white-space: pre-wrap;
+}
+
+code.block {
+	display: block;
+}
+
+
+.page .faux-td {
+	padding: 1em 1.25em;
+	border-bottom: 1px solid #CCC;
+}
+
+.page .faux-td:last-child {
+	border: none;
+}
+
+
+footer {
+	font-size: 12px;
+	color: #CCC;
+	text-align: center;
+	margin: 5em 0 2em;
+}
+
+.controls {
+	float: right;
+}
+
+.controls li {
+	font-size: 10px;
+	text-transform: uppercase;
+	background: #FFF;
+	padding: .2em 1em;
+	border-bottom: 1px solid #CCC;
+	cursor: pointer;
+}
+
+.controls li:last-child {
+	border-bottom: 0;
+}
+
+.controls li:hover {
+	font-weight: bold;
+}
+
+li.ack:hover,
+tr.ack .controls li.ack {
+	background: #D9F9F8;
+}
+
+li.fixed:hover,
+tr.fixed .controls li.fixed {
+	background: #E7FFE0;
+}
+
+li.reject:hover,
+tr.reject .controls li.reject {
+	background: #EEE;
+}
+
+li.delete:hover,
+tr.delete .controls li.delete {
+	background: #FFE0E0;
+}
+
+
+
+
+
+.hide {
+	display: none;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.no-pad,
+.page .no-pad {
+	padding: 0;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 800px) {
+	header {
+		
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	.home h1 {
+		font-size: 40px !important;
+	}
+
+	.home h1 i {
+		font-size: 50px !important;
+	}
+
+	h2 {
+		font-size: 30px;
+	}
+
+	#header-search {
+		display: none;
+	}
+}

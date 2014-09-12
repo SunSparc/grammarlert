@@ -32,7 +32,7 @@ func (r *InboundReport) Validate(errors binding.Errors, req *http.Request) bindi
 		errors = append(errors, binding.Error{
 			FieldNames:     []string{"url"},
 			Classification: "HostError",
-			Message:        "The URL appears to be in a bad format",
+			Message:        "The URL appears to be in a bad format (1)",
 		})
 	} else {
 		r.ParsedURL = parsedUrl
@@ -57,7 +57,7 @@ func (r *InboundReport) Validate(errors binding.Errors, req *http.Request) bindi
 			errors = append(errors, binding.Error{
 				FieldNames:     []string{"url"},
 				Classification: "HostError",
-				Message:        "The URL appears to be in a bad format",
+				Message:        "The URL appears to be in a bad format (2)",
 			})
 		} else {
 			r.ParsedURL = parsedUrl

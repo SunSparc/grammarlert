@@ -29,5 +29,7 @@ func main() {
 		http.ServeFile(resp, req, "public/report.html")
 	})
 
+	m.Get("/test", func() string { return "test successful" })
+
 	m.Run()
 }

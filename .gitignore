@@ -1,3 +1,8 @@
 grammarlert
 dump.json
 notes
+*.tar.gz
+*.gz
+*.crx
+*.zip
+*.pem

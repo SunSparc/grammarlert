@@ -68,6 +68,23 @@ h3 {
 	color: #333;
 }
 
+.download {
+	padding: 1em 0;
+	background: #FC941E;
+	color: #FFF;
+	margin-bottom: 3em;
+}
+.download h2 {
+	text-align: center;
+}
+.download a, .downlaod a:visited {
+	color: #ffffff;
+	text-decoration: none;
+}
+.download a:hover {
+	color: #777777;
+}
+
 p {
 	padding: .5em 0;
 }

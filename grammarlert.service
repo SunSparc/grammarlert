@@ -1,0 +1,15 @@
+[Unit]
+Description=Grammarlert Web Site
+After=network-online.target
+Requires=network-online.target
+
+[Service]
+Type=simple
+User=<web-user-name>
+Group=<web-user-group>
+ExecStart=/path/to/grammarlert
+Restart=on-failure
+TimeoutStopSec=5
+
+[Install]
+WantedBy=default.target

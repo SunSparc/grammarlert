@@ -7,7 +7,8 @@ Requires=network-online.target
 Type=simple
 User=<web-user-name>
 Group=<web-user-group>
-ExecStart=/path/to/grammarlert
+WorkingDirectory=/path/to/grammarlert.com
+ExecStart=/path/to/grammarlert.com/gammarlert
 Restart=on-failure
 TimeoutStopSec=5
 

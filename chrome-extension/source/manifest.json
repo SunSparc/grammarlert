@@ -1,6 +1,6 @@
 {
   "name": "grammarlert",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "manifest_version": 2,
   "description": "You found a typo, why not flag it to be fixed?",
   "homepage_url": "http://grammarlert.nacnud.com",

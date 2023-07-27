@@ -5,7 +5,7 @@ function updateFormAction(event) {
 	{
 		var url = tabs[0].url;
 		var suggestion = document.getElementById("suggestion").value;
-  		var formUrl = "http://grammarlert.nacnud.com/app/report";
+  		var formUrl = "https://grammarlert.com/app/report";
   		var params = '{'+
   						'"url":"'+url+'",'+
   						'"original":"'+selectedText+'",'+
